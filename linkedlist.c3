@@ -1,21 +1,21 @@
-module linkedlist;
+module linkedlist @generic(Type);
 import std::io;
 import std::core;
 
 
-struct Node {
-   int value;
+struct Node{
+   Type value;
     Node* next;
 }
 
 
-fn void init_node(Node* node,int value) {
+fn void init_node(Node* node,Type value) {
     node.value = value;
     node.next = null;
 }
 
 
-fn void append(Node** head, int value) {
+fn void append(Node** head, Type value) {
     Node* new_node = mem::new(Node);
     init_node(new_node, value);
     
@@ -51,8 +51,6 @@ fn void free_list(Node* head) {
 
     }
 }
-
-
 
 
 
