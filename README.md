@@ -1,4 +1,4 @@
-# Generic linkedlist-c3
+# Generic Linked List in c3 Programming Language
 
 This is a simple implementation of a generic linked list module written in C3 programming language. It is intended for testing and demonstration purposes of the C3 language features.
 
