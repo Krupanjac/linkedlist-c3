@@ -10,7 +10,7 @@ fn void main () {
 linkedlist::append{int}(&head, 10);
     linkedlist::append{int}(&head, 20);
     linkedlist::append{int}(&head, 30);
-
+    linkedlist::remove{int}(&head, 20);
     io::printn("Linked List Contents:");
     linkedlist::print_list{int}(head);
     linkedlist::free_list{int}(head);
@@ -24,4 +24,4 @@ linkedlist::append{float}(&float_head, 1.1);
     io::printn("Float Linked List Contents:");
     linkedlist::print_list{float}(float_head);
     linkedlist::free_list{float}(float_head);
-
+}

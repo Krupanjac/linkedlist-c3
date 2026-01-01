@@ -31,6 +31,29 @@ fn void append(Node** head, Type value) {
     current.next = new_node;
 }
 
+fn void remove(Node** head, Type value) {
+    if (*head == null) {
+        return;
+    }
+    
+    if ((*head).value == value) {
+        Node* temp = *head;
+        *head = (*head).next;
+        mem::free(temp);
+        return;
+    }
+    
+    Node* current = *head;
+    while (current.next != null && current.next.value != value) {
+        current = current.next;
+    }
+    
+    if (current.next != null) {
+        Node* temp = current.next;
+        current.next = current.next.next;
+        mem::free(temp);
+    }
+}
 
 fn void print_list(Node* head) {
     Node* current = head;
